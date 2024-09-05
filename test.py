@@ -14,8 +14,18 @@ def main():
     # Initialize the ERC721 object with the loaded URI
     erc721 = ERC721(ethereum_deployer_uri)
 
-    # Example process call with some data
-    erc721.process("Example data")
+    # Example data to be processed
+    data = [{
+        "network": "hamsterpunks_holesky",
+        "name": "HamsterPunks",
+        "address": "0xC2D3be7aAd17E853153ED10a0064e20112939bEB",
+        "to": "0xee570fE3C36A3bBf6bdf4376e03959f949612105",
+        "id": "QmWgQnjwJCjMX4gEwTfAwyUwnLxWeMMyWteJXJyp95vR1g" 
+    }]
+
+    # Pass the example data as an argument
+    transaction = erc721.process(data)
+    print(transaction)
 
 if __name__ == "__main__":
     main()
