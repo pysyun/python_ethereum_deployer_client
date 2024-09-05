@@ -7,5 +7,5 @@ setup(
     author='Py Syun',
     author_email='pysyun@vitche.com',
     py_modules=['ethereum.deployer.client.ERC721',],
-    install_requires=['requests']
+    install_requires=['requests', 'python-dotenv']
 )
